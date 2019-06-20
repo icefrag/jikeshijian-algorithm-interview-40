@@ -1,43 +1,28 @@
 package com.wurui;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @description:
  * @author: wurui
  * @create: 2018-11-28 15:20
  **/
 public class Test {
-    public static void main(String[] args) {
-        List<Student> stuends = new ArrayList<>();
-
-        Student student = null;
-        for (int i = 0; i < 3; i++) {
-            student = new Student();
-            student.setName("小白:" + i);
-            stuends.add(student);
+    public static double getTotal(int a, int n) {
+        double total = 0;
+        for (int i = 1; i <= n; i++) {
+            total += a * (1 - Math.pow(10,i))/(1 - 10);
         }
 
-        System.out.println(stuends);
-    }
-}
-
-class Student {
-    private String name;
-
-    public String getName() {
-        return name;
+        return total;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public static void main(String[] args) {
+//        System.out.println(Test.getTotal(1,5));
+        String s = "0";
+        Integer.parseInt(s);
+        s = "0.0";
+        if (Float.parseFloat(s) == 0){
+            System.out.println("xxx");
+        }
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }
